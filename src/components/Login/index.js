@@ -6,18 +6,19 @@ import Logout from "./components/Logout"
 class Login extends Component {
   state = {IsloggedIn: true}
 
-  onLogIN = () => {
+  onLogin = () => {
     this.setState(prevState =>
       prevState.IsloggedIn ? {IsloggedIn: false} : {IsloggedIn: true},
     )
   }
   render() {
     const {IsloggedIn} = this.state
+    
     return (
         {IsloggedIn? <Message/>:(<Message1/>
             <Logout/>)}
       <div>
-        <button onClick={this.onLogIN}>Login</button>
+        <button onClick={this.onLogin}>Login</button>
       </div>
     )
   }

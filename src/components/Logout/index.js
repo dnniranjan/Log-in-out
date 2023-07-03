@@ -12,14 +12,14 @@ class Logout extends Component {
     )
   }
   render() {
-    const {IsloggedIn} = this.state
+    const {Isloggedout} = this.state;
+    
     return (
-        
-        {Isloggedout? <Message/>:(<Message1/>
-            <Logout/>)}
-      <div>
+        {Isloggedout? ( <Message1/> <div>
         <button onClick={this.onLogout}>Logout</button>
-      </div>
+      </div>):(<Message/>
+            <Login/>)}
+      
     )
   }
 }
