@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import './index.css'
-import Login from './components/Login'
-import Logout from './components/Logout'
+import Login from '../Login'
+import Logout from '../Logout'
 
 class Home extends Component {
   render() {

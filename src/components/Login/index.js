@@ -4,22 +4,22 @@ import Message from './components/Message'
 import Logout from "./components/Logout"
 
 class Login extends Component {
-  state = {IsloggedIn: true}
+  state = {isloggedIn: true}
 
   onLogin = () => {
     this.setState(prevState =>
-      prevState.IsloggedIn ? {IsloggedIn: false} : {IsloggedIn: true},
+      prevState.isloggedIn ? {isloggedIn: false} : {isloggedIn: true},
     )
   }
   render() {
-    const {IsloggedIn} = this.state
+    const {isloggedIn} = this.state
     
     return (
-        {IsloggedIn? <Message/>:(<Message1/>
-            <Logout/>)}
-      <div>
+        {isloggedIn ? (<Message/> <div>
         <button onClick={this.onLogin}>Login</button>
-      </div>
+      </div>):(<Message1/>
+            <Logout/>)}
+      
     )
   }
 }
